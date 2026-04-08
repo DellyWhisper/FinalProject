@@ -3,24 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "Characters/WAS_JRPG_CharacterBase.h"
 #include "WAS_Character_Base.generated.h"
 
 UCLASS()
-class FINALPROJECT_API AWAS_Character_Base : public AActor
+class FINALPROJECT_API AWAS_Character_Base : public AWAS_JRPG_CharacterBase
 {
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
-	AWAS_Character_Base();
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	AWAS_Character_Base(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 };

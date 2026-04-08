@@ -18,6 +18,10 @@
 		{
 			"Name": "GameplayAbilities",
 			"Enabled": true
+		},
+		{
+			"Name": "PaperZD",
+			"Enabled": true
 		}
 	],
 	"Modules": [

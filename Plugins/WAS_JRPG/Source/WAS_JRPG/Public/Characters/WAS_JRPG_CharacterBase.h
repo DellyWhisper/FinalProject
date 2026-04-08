@@ -3,9 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
 #include "AbilitySystem/Core/WAS_JRPG_AbilitySet.h"
+#include "PaperZDCharacter.h"
 #include "WAS_JRPG_CharacterBase.generated.h"
 
 class UGameplayEffect;
@@ -15,7 +15,7 @@ class UWAS_JRPG_AttributeSetBase;
 struct FOnAttributeChangeData;
 
 UCLASS(Abstract, Blueprintable)
-class WAS_JRPG_API AWAS_JRPG_CharacterBase : public ACharacter, public IAbilitySystemInterface
+class WAS_JRPG_API AWAS_JRPG_CharacterBase : public APaperZDCharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 

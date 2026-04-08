@@ -16,7 +16,8 @@ public class WAS_JRPG : ModuleRules
 				"Engine",
 				"GameplayAbilities",
 				"GameplayTags",
-				"GameplayTasks"
+				"GameplayTasks",
+				"PaperZD"
 			}
 			);
 
