@@ -56,6 +56,9 @@ class WAS_JRPG_API UWAS_JRPG_AbilitySet : public UPrimaryDataAsset
 public:
 	bool GiveToAbilitySystem(UAbilitySystemComponent* AbilitySystemComponent, FWAS_JRPG_AbilitySetGrantedHandles* OutGrantedHandles, UObject* SourceObject = nullptr) const;
 
+	UFUNCTION(BlueprintCallable, Category = "WAS|AbilitySet")
+	void ConfigureDefaultInitEffect(TSubclassOf<UGameplayEffect> EffectClass, float EffectLevel = 1.0f);
+
 	const TArray<FWAS_JRPG_GrantedAbility>& GetGrantedAbilities() const;
 	const TArray<FWAS_JRPG_GrantedGameplayEffect>& GetGrantedEffects() const;
 

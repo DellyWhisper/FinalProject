@@ -135,6 +135,21 @@ bool UWAS_JRPG_AbilitySet::GiveToAbilitySystem(UAbilitySystemComponent* AbilityS
 	return bGrantedAnything;
 }
 
+void UWAS_JRPG_AbilitySet::ConfigureDefaultInitEffect(TSubclassOf<UGameplayEffect> EffectClass, float EffectLevel)
+{
+	GrantedAbilities.Reset();
+	GrantedEffects.Reset();
+
+	if (!EffectClass)
+	{
+		return;
+	}
+
+	FWAS_JRPG_GrantedGameplayEffect& GrantedEffect = GrantedEffects.AddDefaulted_GetRef();
+	GrantedEffect.EffectClass = EffectClass;
+	GrantedEffect.EffectLevel = EffectLevel;
+}
+
 const TArray<FWAS_JRPG_GrantedAbility>& UWAS_JRPG_AbilitySet::GetGrantedAbilities() const
 {
 	return GrantedAbilities;
